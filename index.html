@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Gaming Hub</h1>
+            <p>Select a game to play!</p>
+        </header>
+
+        <div class="games-section">
+            <div class="games-list" id="gamesList"></div>
+        </div>
+
+        <div id="gameModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="gameTitle"></h2>
+                <div id="gameContainer"></div>
+                <button id="backButton" class="back-btn">← Back to Games</button>
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <details>
+                <summary>⚙️ Admin Panel</summary>
+                <div class="admin-content">
+                    <h3>Add New Game</h3>
+                    <input type="text" id="gameName" placeholder="Game Name" />
+                    <input type="text" id="gameDescription" placeholder="Description" />
+                    <select id="gameType">
+                        <option value="builtin">Built-in Game</option>
+                        <option value="url">External URL</option>
+                    </select>
+                    <select id="builtinGameSelect" style="display:none;">
+                        <option value="">Select a game</option>
+                        <option value="snake">Snake</option>
+                        <option value="flappy">Flappy Bird</option>
+                        <option value="tetris">Tetris</option>
+                    </select>
+                    <input type="text" id="gameUrl" placeholder="Game URL (if External)" style="display:none;" />
+                    <button id="addGameBtn">Add Game</button>
+                    <h3 style="margin-top: 20px;">Current Games</h3>
+                    <div id="gamesList2"></div>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <script src="games.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
